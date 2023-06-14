@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Daffodil International University Payment Gateway</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      max-width: 150px;
+    }
+
+    form {
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #666;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #f44336;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e53935;
+    }
+
+    /* Styling and Animation for "Pay Now" Button */
+    .button-pay {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      width: 100%;
+      perspective: 500px;
+    }
+
+    .button-pay span {
+      position: relative;
+      display: block;
+      padding: 10px 15px;
+      z-index: 1;
+    }
+
+    .button-pay::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      transform-origin: 100% 0;
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      z-index: 0;
+    }
+
+    .button-pay:hover::before {
+      transform-origin: 0 0;
+      transform: scaleX(1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="https://daffodilvarsity.edu.bd/template/images/diulogoside.png" alt="Daffodil International University Logo">
+      </div>
+      <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Dutch-bangla_bank_limited.svg/1200px-Dutch-bangla_bank_limited.svg.png" alt="Dutch Bangla Bank Limited Logo">
+      </div>
+    </div>
+    <h2>DIU Payment Gateway</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+
+      <label for="card">Card Number</label>
+      <input type="text" id="card" name="card" placeholder="Enter card number">
+
+      <label for="expiry">Expiry Date</label>
+      <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" placeholder="Enter CVV">
+
+      <label for="amount">Amount</label>
+      <input type="number" id="amount" name="amount" placeholder="Enter amount">
+
+      <div class="button-pay">
+        <button type="submit"><span>Pay Now</span></button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
